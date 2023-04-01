@@ -1,4 +1,4 @@
-# Ocean Life (水族館形象網站)
+# Ocean Life (水族館形象網站) | 2023.04
 ![](https://i.imgur.com/dWeyazQ.jpg)
 
 ## 專案說明
@@ -13,9 +13,8 @@
 
 
 ## Demo
-前台：https://jhihying.github.io/ocean-life/
-
-後台 (無RWD)：https://jhihying.github.io/ocean-life/backendLogin
+- 前台：https://jhihying.github.io/ocean-life/
+- 後台 (無RWD)：https://jhihying.github.io/ocean-life/backendLogin
 
 
 ## 使用技術 / 套件 / 工具
@@ -75,3 +74,6 @@ npm install
 ```
 npm run serve
 ```
+
+## 參考資料
+- [墨田水族館](https://www.sumida-aquarium.com/cn_han/index.html)
