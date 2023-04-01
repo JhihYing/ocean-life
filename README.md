@@ -8,9 +8,9 @@
 
 做此專案的主要目的如下：
 
+- 練習 如何從設計發想至網站規劃，並繪製 UI 介面，最後實作出網站的整個流程
 - 練習 Vue3 框架、Vue生態系統與工具 (包含 vue-cli、vue-router、vuex)
 - 練習 如何與後端工程師合作，並且以 **前後端分離** 的方式完成
-
 
 ## Demo
 - 前台：https://jhihying.github.io/ocean-life/
