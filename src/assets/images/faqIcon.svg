@@ -1,0 +1,9 @@
+<svg width="60" height="51" viewBox="0 0 60 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.25841 1.63263H42.5929C44.3922 1.63263 45.8513 3.09065 45.8513 4.88995V30.9085C45.8513 32.7078 44.3922 34.1669 42.5929 34.1669H9.91541L2 41.2394V4.88995C2 3.09065 3.45923 1.63263 5.25841 1.63263Z" stroke="#BEBEBE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.8037 38.4104V39.3965C21.8037 41.1958 23.2629 42.6538 25.061 42.6538H50.8034L58.5813 49.7262V13.378C58.5813 11.5787 57.1223 10.1195 55.324 10.1195H50.0946" stroke="#BEBEBE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="10.3232" y1="10.2843" x2="26.212" y2="10.2843" stroke="#BEBEBE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="10.3232" y1="15.9424" x2="26.212" y2="15.9424" stroke="#BEBEBE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="10.3232" y1="21.6005" x2="17.7249" y2="21.6005" stroke="#BEBEBE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32.1968 11.2294C34.2767 8.5344 37.5272 9.52509 39.0573 11.4939C40.3791 13.1959 39.9576 15.506 38.4125 16.8907C37.5935 17.6237 36.0633 17.7257 35.3603 18.5228C34.744 19.2192 34.9491 20.0988 34.9491 21.1674" stroke="#BEBEBE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M35.0186 25.2334C34.6086 25.2334 34.2764 25.5964 34.2764 26.0465C34.2764 26.4955 34.6086 26.8597 35.0186 26.8597C35.4297 26.8597 35.7619 26.4955 35.7619 26.0465C35.7619 25.5964 35.4297 25.2334 35.0186 25.2334Z" fill="#BEBEBE" stroke="#BEBEBE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

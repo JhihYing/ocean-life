@@ -1,0 +1,26 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  // padding: 0px 50px;
+  margin-bottom: 20px;
+  padding: 0px 50px;
+
+  @include laptop {
+    padding: 0px;
+  }
+
+  > p {
+    @include font($black, 400, 15px);
+  }
+
+  > a {
+    @include font($black, 400, $fontSize-h6);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+}

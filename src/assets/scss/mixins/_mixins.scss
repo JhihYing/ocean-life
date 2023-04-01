@@ -1,0 +1,187 @@
+// 照片
+@mixin img($object-fit: cover) {
+  width: 100%;
+  height: 100%;
+  object-fit: $object-fit;
+}
+
+// svg 圖片
+@mixin img-svg($u, $r: no-repeat) {
+  background-image: url("@/assets/images/#{$u}.svg");
+  background-repeat: $r;
+}
+
+// jpg 圖片
+@mixin img-jpg($u, $r: no-repeat) {
+  background-image: url("@/assets/images/#{$u}.jpg");
+  background-repeat: $r;
+}
+
+// 字體
+@mixin font($color, $w, $s: 16px) {
+  color: $color;
+  font-weight: $w; //300 ,400 ,500 ,700 ,900
+  font-size: $s;
+  letter-spacing: 1.6px;
+}
+
+// flex 置中
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+// 按鈕 (x)
+@mixin button($color, $b, $p, $bc) {
+  border: 1px solid $color;
+  border-radius: $b;
+  padding: $p;
+  background-color: $bc;
+}
+
+// 固定按鈕 <button>
+@mixin staticButton($color, $bc, $w: 146px, $h: 38px, $b: 20px) {
+  border: 2px solid $color;
+  background-color: $bc;
+  width: $w;
+  height: $h;
+  border-radius: $b;
+  display: inline-block;
+  cursor: pointer;
+}
+
+// 固定按鈕 <a>
+@mixin staticAbutton($color, $bc, $w: 146px, $h: 38px, $b: 20px) {
+  border: 2px solid $color;
+  background-color: $bc;
+  width: $w;
+  height: $h;
+  border-radius: $b;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// bg 背景 (icon列表)
+@mixin bg {
+  @include img-svg(bg01);
+  width: 100%;
+  background-size: cover;
+  margin-bottom: 60px;
+  padding: 65px 20px 95px 20px;
+  // border: 1px solid red;
+  background-position: center;
+}
+
+// RWD container
+@mixin rwdContainer($max-w: 1360px) {
+  width: 100%;
+  max-width: $max-w;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+// RWD container-main
+@mixin rwdContainerMain($max-w: 1140px) {
+  width: 100%;
+  max-width: $max-w;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+// containerMain
+@mixin containerMain() {
+  // position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include rwdContainerMain;
+  max-width: 1080px;
+  // border: 1px solid red;
+
+  @include desktop {
+    max-width: 1140px;
+  }
+  @include laptop {
+    max-width: 960px;
+    padding: 0px 20px;
+  }
+  @include iPad {
+    max-width: 720px;
+  }
+  @include mobile {
+    max-width: 540px;
+  }
+  @include mobile-XS {
+    max-width: 390px;
+  }
+}
+
+@mixin headerContainer() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+  @include rwdContainer;
+  // border: 1px solid red;
+
+  @include desktop {
+    max-width: 1140px;
+  }
+  @include laptop {
+    max-width: 960px;
+  }
+  @include iPad {
+    max-width: 720px;
+  }
+  @include mobile {
+    max-width: 540px;
+  }
+  @include mobile-XS {
+    max-width: 414px;
+  }
+}
+
+// RWD
+@mixin mobile-XS() {
+  // 手機板 (XS)
+  @media all and (max-width: 414px) {
+    // max-width: 390px;
+    @content;
+  }
+}
+
+@mixin mobile() {
+  // 手機板
+  @media all and (max-width: 576px) {
+    // max-width: 540px;
+    @content;
+  }
+}
+
+@mixin iPad() {
+  // 平板
+  @media all and (max-width: 768px) {
+    // max-width: 720px;
+    @content;
+  }
+}
+
+@mixin laptop() {
+  // 筆電
+  @media all and (max-width: 992px) {
+    // max-width: 960px;
+    @content;
+  }
+}
+
+@mixin desktop() {
+  // 桌機板
+  @media all and (max-width: 1200px) {
+    // max-width: 1140px;
+    @content;
+  }
+}

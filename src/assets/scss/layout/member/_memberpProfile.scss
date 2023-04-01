@@ -1,0 +1,266 @@
+.MemberpProfile {
+  width: 100%;
+  // border: 1px solid red;
+  margin-bottom: 90px;
+
+  padding-top: 75px;
+}
+.containerMain {
+  @include containerMain;
+  margin-top: 70px;
+  align-items: inherit;
+
+  > h3 {
+    @include font($primary, 600, $fontSize-h3);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  // > .title {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   // padding: 0px 50px;
+  //   margin-bottom: 20px;
+  //   padding: 0px 50px;
+
+  //   @include laptop {
+  //     padding: 0px;
+  //   }
+
+  //   > p {
+  //     @include font($black, 400, 15px);
+  //   }
+
+  //   > a {
+  //     @include font($black, 400, $fontSize-h6);
+  //     text-decoration: underline;
+  //     cursor: pointer;
+  //   }
+  // }
+
+  .profileBox {
+    // border: 1px solid $black-light;
+    // padding: 50px 50px;
+    border: 1px solid $black-light;
+    margin: 0 auto;
+    // margin-top: 30px;
+    width: 90%;
+    padding: 50px 50px;
+
+    @include laptop {
+      width: 100%;
+      padding: 30px 30px;
+    }
+    @include mobile-XS {
+      padding: 20px 20px;
+    }
+
+    .profile {
+      display: flex;
+      justify-content: center;
+
+      @include iPad {
+        width: 100%;
+        justify-content: space-between;
+      }
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profileLeft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .profileImg {
+          border: 1px solid $black-light;
+          border-radius: 50%;
+          width: 128px;
+          height: 128px;
+          overflow: hidden;
+
+          > img {
+            @include img;
+          }
+        }
+
+        > button {
+          border: none;
+          // background-color: #707070;
+          background-color: $primary;
+          color: white;
+          border-radius: 3px;
+          padding: 3px 10px 5px 10px;
+          margin-top: 20px;
+          letter-spacing: 1.6px;
+          cursor: pointer;
+
+          transition: all 0.2s;
+
+          &:hover {
+            background-color: $secondary;
+          }
+
+          &::before {
+            content: "+";
+            font-size: 16px;
+            color: white;
+            font-weight: 600;
+            margin-right: 3px;
+          }
+        }
+      }
+
+      .profileRight {
+        margin-left: 120px;
+
+        @include iPad {
+          margin-left: 30px;
+        }
+        @include mobile {
+          margin-left: 0px;
+          margin-top: 50px;
+        }
+
+        .editProfile {
+          display: flex;
+          align-items: center;
+          .editIcon {
+            @include img-svg(editMember);
+            width: 20px;
+            height: 18px;
+            margin-right: 8px;
+            background-size: contain;
+          }
+          > p {
+            @include font($black, 500);
+          }
+        }
+
+        .profileText {
+          margin: 20px 0px 30px 0px;
+
+          > li {
+            display: flex;
+            align-items: center;
+            margin: 15px 0px;
+
+            &.addressTitle {
+              align-items: flex-start;
+            }
+
+            > p,
+            label {
+              @include font($black, 400, 15px);
+              cursor: pointer;
+
+              &.textTitle {
+                width: 72px;
+                margin-right: 20px;
+              }
+            }
+
+            > a {
+              @include font($primary, 400, 15px);
+              cursor: pointer;
+            }
+
+            .addressBox {
+              .address {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.agreenBox {
+  display: flex;
+  align-items: flex-start;
+
+  .agreenEmailText {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+
+    > label {
+      @include font($black, 400, $fontSize-h6);
+      cursor: pointer;
+
+      &.agreenTitle {
+        @include font($black, 500, 15px);
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+.profileBtn {
+  margin-top: 80px;
+  text-align: center;
+
+  @include mobile {
+    margin-top: 60px;
+  }
+
+  > button {
+    @include font(white, 400, $fontSize-h6);
+    background-color: $primary;
+    width: 95px;
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &.cancel {
+      border: 2px solid $primary;
+      color: $primary;
+      background-color: white;
+      margin-right: 30px;
+
+      &:hover {
+        color: $secondary;
+        border-color: $secondary;
+      }
+    }
+
+    &.save:hover {
+      background-color: $secondary;
+    }
+  }
+}
+
+select,
+input {
+  // @include font(white, 400, $fontSize-h6);
+  color: $black;
+  cursor: pointer;
+}
+
+.inputText {
+  width: calc(100% - 92px);
+}
+
+.road {
+  width: 100%;
+}
+
+// loading
+.loading {
+  // width: 100%;
+  // height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+
+.password:hover {
+  color: #2e75b7 !important;
+}

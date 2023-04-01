@@ -1,0 +1,18 @@
+.logoBtn {
+  // @include font(white, 300, 12px);
+  display: inline-block;
+  padding: 0px 0px 9px 0px;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+
+  @include mobile {
+    width: 155px;
+  }
+
+  .logoIcon {
+    width: 100%;
+  }
+}

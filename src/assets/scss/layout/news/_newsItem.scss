@@ -1,0 +1,180 @@
+.newsLi {
+  margin: 0 auto; // 排版
+  width: 100%;
+  position: relative;
+
+  &:hover > a > .newsImgBox > img {
+    transform: scale(1.06);
+  }
+  &:hover > a > .newsTimeBox {
+    opacity: 0.9;
+  }
+  &:hover > a > .newsTitleBox {
+    opacity: 0.8;
+  }
+
+  a {
+    .newsImgBox {
+      width: 100%;
+      height: 172px;
+      overflow: hidden;
+
+      @include laptop {
+        height: 140px;
+      }
+      @include mobile-XS {
+        height: 180px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        transition: all 0.8s; // 要加在這裡
+      }
+    }
+  }
+}
+
+.newsTimeBox {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0px;
+
+  h6 {
+    @include font($black, 400, $fontSize-h6);
+  }
+
+  .newsCategory {
+    position: relative;
+    display: flex;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: aqua;
+      position: absolute;
+      border-radius: 50%;
+      left: -14px;
+      top: 4px;
+    }
+  }
+}
+
+.newsTitleBox {
+  h5 {
+    @include font($tertiary, 600);
+    margin-bottom: 10px;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; // 超過1行
+    // white-space: nowrap; // 強制不換行
+    overflow: hidden; // 超出範圍的隱藏
+    // text-overflow: ellipsis; // 溢出的文字使用刪節號
+    line-height: 1.5;
+  }
+
+  p {
+    @include font($black, 400, $fontSize-h6);
+    text-align: start;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; // 超過1行
+    // white-space: nowrap; // 強制不換行
+    overflow: hidden; // 超出範圍的隱藏
+    // text-overflow: ellipsis; // 溢出的文字使用刪節號
+    line-height: 1.5;
+  }
+}
+
+.newsLi:nth-child(5)::after,
+.newsLi:nth-child(6)::after,
+.newsLi:nth-child(7)::after,
+.newsLi:nth-child(8)::after {
+  content: "";
+  display: inline-block;
+  // width: 245px;
+  width: 100%;
+  height: 1.5px;
+  background: $black-light;
+  position: absolute;
+  top: -22px;
+}
+
+.newsLi::before {
+  content: "";
+
+  display: inline-block;
+  width: 1.5px;
+  height: 260px;
+  background: $black-light;
+  position: absolute;
+  right: -16px;
+
+  @include laptop {
+    height: 260px;
+  }
+}
+.newsLi:last-child::before,
+.newsLi:nth-child(4)::before {
+  display: none;
+}
+
+// RWD
+// laptop
+.newsLi:nth-child(3)::before {
+  @include laptop {
+    display: none;
+  }
+}
+.newsLi:nth-child(4)::before {
+  @include laptop {
+    display: inline-block;
+  }
+}
+.newsLi:nth-child(4)::after {
+  @include laptop {
+    display: none;
+  }
+}
+
+// mobile
+.newsLi:nth-child(even)::before {
+  @include mobile {
+    display: none;
+  }
+}
+.newsLi:nth-child(odd)::before {
+  @include mobile {
+    display: inline-block;
+  }
+}
+.newsLi:nth-child(4)::after {
+  @include mobile {
+    display: inline-block;
+  }
+}
+
+// mobile-XS
+.newsLi:nth-child(odd)::before {
+  @include mobile-XS {
+    display: none;
+  }
+}
+
+.newsLi:nth-child(5)::after {
+  @include mobile-XS {
+    content: "";
+    display: inline-block;
+    // width: 245px;
+    width: 100%;
+    height: 1.5px;
+    background: $black-light;
+    position: absolute;
+    bottom: -22px;
+  }
+}

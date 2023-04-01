@@ -1,0 +1,68 @@
+.ticketTable {
+  border: 1px solid $black-light;
+  width: 100%;
+
+  thead {
+    background-color: $primary;
+
+    tr > th {
+      @include font(white, 400);
+      width: 165px;
+      vertical-align: middle;
+
+      @include iPad {
+        width: 80px;
+      }
+      @include mobile {
+        font-size: $fontSize-h6;
+      }
+
+      &:first-child {
+        @include mobile {
+          writing-mode: vertical-rl;
+        }
+      }
+
+      &.people {
+        width: calc(100% - 165px - 165px);
+      }
+    }
+  }
+
+  tbody {
+    td {
+      text-align: center;
+      &.ticketWho {
+        text-align: start;
+      }
+      &:first-child {
+        @include iPad {
+          writing-mode: vertical-rl;
+        }
+      }
+    }
+    tr > td {
+      @include font($black, 400);
+      vertical-align: middle;
+
+      @include mobile {
+        font-size: $fontSize-h6;
+      }
+    }
+    tr.trBg {
+      background-color: $bg-primary;
+    }
+  }
+}
+
+th,
+td {
+  border: 1px solid $black-light;
+  padding: 15px 48px;
+  line-height: 1.5;
+  // width: 145px;
+
+  @include iPad {
+    padding: 15px 20px;
+  }
+}

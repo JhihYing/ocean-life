@@ -1,0 +1,41 @@
+.shareBox {
+  display: flex;
+  align-items: center;
+
+  @include laptop {
+    display: none;
+  }
+
+  span {
+    @include font($black, 400);
+    margin-right: 6px;
+  }
+  a {
+    margin-left: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.rwdShareNews {
+  display: none;
+
+  @include laptop {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  > a {
+    margin-left: 20px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

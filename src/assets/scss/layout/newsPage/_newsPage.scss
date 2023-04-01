@@ -1,0 +1,181 @@
+// #app {
+//   height: calc(100% - 75px - 192px);
+// }
+
+.news_page {
+  padding-top: 75px;
+  // border: 1px solid red;
+
+  .containerMain {
+    @include containerMain;
+    align-items: flex-start;
+    margin-top: 70px;
+  }
+}
+
+.article {
+  margin: 0 auto;
+  width: 90%;
+  // border: 1px solid rgb(193, 60, 115);
+  padding: 0px 50px;
+  margin-bottom: 100px;
+
+  @include laptop {
+    width: 100%;
+    padding: 0px 30px;
+  }
+
+  .articleIMG {
+    width: 100%;
+    height: 550px;
+    // border: 1px solid green;
+    margin-bottom: 30px;
+    // margin: 0 auto;
+
+    @include laptop {
+      height: 450px;
+    }
+    @include iPad {
+      height: 350px;
+    }
+    @include mobile {
+      height: 250px;
+    }
+    @include mobile-XS {
+      height: 200px;
+    }
+
+    img {
+      @include img;
+    }
+  }
+
+  .content {
+    h6 {
+      @include font($black, 500);
+      margin-bottom: 10px;
+    }
+    .titleBox {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 42px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 1.5px;
+        background: $black-light;
+        position: absolute;
+        bottom: -20px;
+      }
+
+      h2 {
+        @include font($primary, 600, $fontSize-h4);
+        line-height: 1.2;
+      }
+    }
+
+    .textBox {
+      p {
+        @include font($black, 400);
+        word-wrap: break-word;
+        line-height: 1.5;
+
+        @include iPad {
+          font-size: 15px;
+        }
+      }
+      .notice {
+        margin-top: 40px;
+        background-color: $bg-primary;
+        padding: 20px 20px;
+        width: 70%;
+
+        @include laptop {
+          width: 80%;
+        }
+        @include iPad {
+          width: 100%;
+        }
+
+        .noticeTitle {
+          @include font($black, 400);
+          word-wrap: break-word;
+          line-height: 1.5;
+          margin-bottom: 5px;
+
+          @include iPad {
+            font-size: 14px;
+          }
+        }
+
+        .noticeInfo {
+          @include font($black, 400, 14px);
+          word-wrap: break-word;
+          line-height: 1.5;
+          list-style: circle;
+          // margin-left: 20px;
+
+          @include iPad {
+            font-size: 14px;
+          }
+        }
+
+        // > ul {
+        //   > li {
+        //     @include font($black, 400, 14px);
+        //     word-wrap: break-word;
+        //     line-height: 1.5;
+        //     list-style: circle;
+        //     margin-left: 20px;
+
+        //     @include iPad {
+        //       font-size: 14px;
+        //     }
+        //   }
+        // }
+      }
+    }
+  }
+}
+
+.otherNews {
+  @include img-svg(bg);
+  // background-repeat: repeat-x;
+  width: 100%;
+  background-size: cover;
+  margin-top: 80px;
+  padding: 80px 100px;
+  // border: 1px solid blue;
+}
+
+.containerNews {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 900px;
+  margin: 0 auto;
+  // border: 1px solid red;
+
+  h3 {
+    @include font($primary, 600, $fontSize-h3);
+    // text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .newsContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+// loading
+.loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

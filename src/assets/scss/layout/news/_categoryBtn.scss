@@ -1,0 +1,38 @@
+.newsBtn {
+  @include flexCenter;
+  margin-bottom: 60px;
+
+  @include mobile {
+    flex-wrap: wrap;
+    width: 318px;
+  }
+
+  .newsBtnLi {
+    border: 2px solid $primary;
+    margin: 0px 8px;
+    display: inherit;
+    padding: 10px 20px;
+    @include font($primary, 400, $fontSize-h6);
+    cursor: pointer;
+
+    @include mobile {
+      margin: 5px 8px;
+    }
+
+    &:hover {
+      border-color: #2978d7;
+      color: #2978d7;
+      transition: all 0.2s;
+    }
+  }
+
+  .newsBtnLi.active {
+    background-color: $primary;
+    color: white;
+
+    &:hover {
+      border-color: $primary;
+      color: white;
+    }
+  }
+}

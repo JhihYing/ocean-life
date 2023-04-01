@@ -1,0 +1,209 @@
+// 消息管理(標題) 區域
+.titleBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  > h3 {
+    @include font($primary, 600, $fontSize-h3);
+  }
+
+  .textBox {
+    display: flex;
+    align-items: center;
+
+    .editorBox {
+      display: flex;
+      align-items: center;
+
+      .cancelBtn,
+      .okBtn {
+        background-color: white;
+        @include font($black, 400, 13px);
+        border: 1px solid $black;
+        border-radius: 3px;
+        width: 45px;
+        height: 27px;
+        cursor: pointer;
+        margin-right: 10px;
+        // display: none;
+        transition: 0.2s;
+
+        &:hover {
+          color: $secondary;
+          border-color: $secondary;
+        }
+      }
+
+      .okBtn {
+        margin-right: 20px;
+      }
+
+      .allEditorBtn {
+        background-color: white;
+        @include font($black, 400, 13px);
+        border: 1px solid $black;
+        border-radius: 3px;
+        width: 45px;
+        height: 27px;
+        cursor: pointer;
+        margin-right: 20px;
+        transition: 0.2s;
+
+        &:hover {
+          color: $secondary;
+          border-color: $secondary;
+        }
+      }
+
+      .addBtn {
+        background-color: #2e75b7;
+        @include font(white, 400, 13px);
+        border: 1px solid #2e75b7;
+        border-radius: 3px;
+        width: 86px;
+        height: 27px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-right: 20px;
+        transition: 0.2s;
+
+        &:hover {
+          background-color: $secondary;
+          border-color: $secondary;
+        }
+      }
+    }
+
+    .infoBox {
+      display: flex;
+      align-items: center;
+
+      > p {
+        @include font($black, 400, $fontSize-h6);
+        margin-right: 20px;
+
+        > span {
+          font-weight: 600;
+        }
+      }
+
+      .searchBox {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        > input {
+          @include font($black, 400, $fontSize-h6);
+          height: 30px;
+          padding: 5px 35px 5px 10px;
+          width: 200px;
+        }
+
+        .searchBtn {
+          @include img-svg(search);
+          background-size: contain;
+          width: 17px;
+          height: 17px;
+          position: absolute;
+          right: 8px;
+          border: none;
+          background-color: initial;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// 表格內容
+.tableBox {
+  border: 2px solid $black-light;
+  padding: 30px 30px;
+  border-radius: 3px;
+
+  .memberTable {
+    width: 100%;
+
+    thead {
+      border-bottom: 1.5px solid $black;
+
+      > tr > th {
+        @include font($black, 500, 15px);
+        padding: 10px 0px;
+        line-height: 1.3;
+      }
+      th.title {
+        width: 20%;
+      }
+    }
+
+    tbody {
+      > tr {
+        border-bottom: 1px solid $black-light;
+
+        &:hover {
+          background-color: #f2f8ff;
+        }
+
+        &:last-child {
+          border: none;
+        }
+
+        > td {
+          @include font($black, 400, $fontSize-h6);
+          vertical-align: middle;
+          text-align: center;
+          padding: 10px 0px;
+          line-height: 1.3;
+
+          > input {
+            cursor: pointer;
+          }
+
+          .stateBtn {
+            background-color: #2e75b7;
+            @include font(white, 400, 13px);
+            border: none;
+            border-radius: 3px;
+            padding: 3px 7px;
+            border: 1px solid #2e75b7;
+            // cursor: pointer;
+
+            &.off {
+              background-color: #898989;
+              border-color: #898989;
+            }
+          }
+          .editorBtn {
+            background-color: initial;
+            @include font($black, 400, 13px);
+            border: 1px solid $black;
+            border-radius: 3px;
+            padding: 3px 7px;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+
+            &:hover {
+              color: $secondary;
+              border-color: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// loading
+.loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

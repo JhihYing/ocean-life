@@ -1,0 +1,23 @@
+.breadMenuBox {
+  margin-bottom: 50px;
+
+  > a {
+    transition: all 0.2s;
+
+    &:hover {
+      color: #8d8d8d;
+    }
+  }
+
+  a,
+  span {
+    @include font($black, 500, 15px);
+  }
+  span {
+    margin: 0px 3px;
+  }
+  .breadTitle {
+    @include font($primary, 600, 15px);
+    line-height: 1.4;
+  }
+}

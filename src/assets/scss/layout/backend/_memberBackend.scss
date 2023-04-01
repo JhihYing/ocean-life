@@ -1,0 +1,163 @@
+// 消息管理(標題) 區域
+.titleBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  // @include mobile-XS {
+  //   flex-direction: column;
+  //   align-items: flex-start;
+  // }
+
+  > h3 {
+    @include font($primary, 600, $fontSize-h3);
+
+    // @include mobile-XS {
+    //   margin-bottom: 15px;
+    // }
+  }
+
+  .textBox {
+    display: flex;
+    align-items: center;
+
+    .infoBox {
+      display: flex;
+      align-items: center;
+
+      > p {
+        @include font($black, 400, $fontSize-h6);
+        margin-right: 20px;
+
+        > span {
+          font-weight: 600;
+        }
+      }
+
+      .searchBox {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        > input {
+          @include font($black, 400, $fontSize-h6);
+          height: 30px;
+          padding: 5px 35px 5px 10px;
+          width: 200px;
+
+          // @include mobile-XS {
+          //   width: 190px;
+          // }
+        }
+
+        .searchBtn {
+          @include img-svg(search);
+          background-size: contain;
+          width: 17px;
+          height: 17px;
+          position: absolute;
+          right: 8px;
+          border: none;
+          background-color: initial;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// 表格內容
+.tableBox {
+  border: 2px solid $black-light;
+  padding: 30px 30px;
+  border-radius: 3px;
+
+  .memberTable {
+    width: 100%;
+
+    // @include mobile-XS {
+    //   display: block;
+    //   overflow-x: auto;
+    //   white-space: nowrap;
+    // }
+
+    thead {
+      border-bottom: 1.5px solid $black;
+
+      > tr > th {
+        @include font($black, 500, 15px);
+        padding: 10px 0px;
+        line-height: 1.3;
+      }
+      th.title {
+        width: 20%;
+      }
+    }
+
+    tbody {
+      > tr {
+        border-bottom: 1px solid $black-light;
+
+        &:hover {
+          background-color: #f2f8ff;
+        }
+
+        &:last-child {
+          border: none;
+        }
+
+        > td {
+          @include font($black, 400, $fontSize-h6);
+          vertical-align: middle;
+          text-align: center;
+          padding: 10px 0px;
+          line-height: 1.3;
+
+          > input {
+            cursor: pointer;
+          }
+
+          .stateBtn {
+            background-color: #2e75b7;
+            @include font(white, 400, 13px);
+            border: none;
+            border-radius: 3px;
+            padding: 3px 7px;
+            border: 1px solid #2e75b7;
+            // cursor: pointer;
+
+            &.off {
+              background-color: #898989;
+              border-color: #898989;
+            }
+          }
+          .editorBtn {
+            background-color: initial;
+            @include font($black, 400, 13px);
+            border: 1px solid $black;
+            border-radius: 3px;
+            padding: 3px 7px;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+
+            &:hover {
+              color: $secondary;
+              border-color: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// loading
+.loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

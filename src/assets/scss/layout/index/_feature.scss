@@ -1,0 +1,141 @@
+.containerMain {
+  position: relative;
+  @include containerMain;
+}
+
+.featureBox {
+  width: 100%;
+  height: 100vh;
+  border: 1px solid blue;
+  background: linear-gradient(#0b3852 0%, #0b437c 70%, #004790 100%);
+  display: flex;
+  align-items: center;
+}
+
+.featureMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 60px 20px;
+  align-items: flex-start;
+
+  > .leftBox {
+    // 標題
+    > h3 {
+      @include font(white, 600, $fontSize-h3);
+      margin-bottom: 100px;
+      line-height: 1.5;
+    }
+
+    // 特色標題
+    .featureTitle {
+      li {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 50px;
+
+        > span {
+          @include font(white, 400, $fontSize-h6);
+        }
+
+        > h5 {
+          @include font(white, 400, $fontSize-h5);
+        }
+
+        &:last-child {
+          margin: 0px;
+        }
+      }
+
+      li.active {
+        > span {
+          @include font($secondary, 400, $fontSize-h6);
+        }
+
+        > h5 {
+          @include font($secondary, 400, 30px);
+          position: relative;
+
+          &::after {
+            content: "";
+            @include img-svg(wave, repeat-x);
+            display: inline-block;
+            width: 185px;
+            height: 8px;
+            background-position: center;
+            margin-bottom: 3px;
+            position: absolute;
+            bottom: -22px;
+            left: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  > .rightBox {
+    display: flex;
+    align-items: center;
+
+    // 圖片01
+    .leftImgBox {
+      width: 373px;
+      height: 450px;
+      margin-right: 50px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .rightTextBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      // 圖片02
+      .featureImg {
+        width: 225px;
+        height: 155px;
+
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      // 內文
+      > p {
+        @include font(white, 300, $fontSize-h6);
+        line-height: 1.5;
+        margin: 20px 0px 40px 0px;
+      }
+
+      // 深入瞭解
+      > a {
+        color: $secondary;
+        letter-spacing: 1px;
+        width: 138px;
+        height: 35px;
+        display: inline-block;
+        text-align: center;
+        line-height: 31px;
+        font-weight: 300;
+        font-size: 13px;
+        border: 2px solid $secondary;
+        border-radius: 20px;
+
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: $secondary;
+          color: white;
+          border-color: $secondary;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.SecondaryBtn {
+  @include font($primary, 400, $fontSize-h6);
+  // border: 2px solid $primary;
+  // padding: 10px 40px;
+  // border-radius: 20px;
+
+  @include staticButton($primary, $primary);
+  // border: 2px solid $primary;
+  // padding: 10px 40px;
+  // border-radius: 20px;
+  // margin-left: 80px;
+  background-color: white;
+}

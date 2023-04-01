@@ -1,0 +1,235 @@
+// 消息管理(標題) 區域
+.titleBox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  > h3 {
+    @include font($primary, 600, $fontSize-h3);
+  }
+
+  > span {
+    @include font($primary, 400);
+    margin-left: 10px;
+  }
+}
+
+// 表格內容
+.tableBox {
+  border: 2px solid $black-light;
+  padding: 30px 30px;
+  border-radius: 3px;
+
+  .tableContent {
+    width: 100%;
+    // margin-bottom: 30px;
+
+    > li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 0.8px;
+        background-color: $black-light;
+        position: absolute;
+        bottom: -20px;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      &.positionTop {
+        align-items: flex-start;
+      }
+
+      &.imgLi {
+        padding: 0px;
+      }
+
+      > label {
+        @include font($black, 500, 15px);
+        // width: 10%;
+        // white-space: nowrap;
+        margin-right: 10px;
+        width: 82px;
+        min-width: 82px;
+        line-height: 1.2;
+      }
+
+      > input,
+      textarea {
+        width: calc(100% - 60px);
+        @include font($black, 400, $fontSize-h6);
+        padding: 5px 12px;
+
+        &.imgInput {
+          padding: 0;
+        }
+      }
+
+      > textarea {
+        height: 180px;
+        resize: none;
+      }
+
+      > p,
+      span,
+      select {
+        @include font($black, 400, $fontSize-h6);
+      }
+    }
+  }
+}
+
+.district {
+  margin: 0px 10px;
+}
+
+// 按鈕
+.btnBox {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.allBtn {
+  width: 60px;
+  background-color: #1152a0;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 4px 0px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid $primary;
+
+  &:hover {
+    border-color: $secondary;
+    background-color: $secondary;
+  }
+
+  &.cancelBtn {
+    margin-right: 30px;
+    background-color: white;
+    color: $primary;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+.imgBox {
+  margin-top: 15px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+// .box {
+//   display: flex;
+//   flex-direction: column;
+
+//   > img {
+//     width: 250px;
+//     margin-top: 15px;
+//   }
+// }
+
+// 彈跳視窗
+.ticket-popup {
+  // border: 1px solid orange;
+  background-color: rgba(0, 0, 0, 0.9);
+  // background-color: aqua;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  z-index: 999;
+  // transition: all 1s ease;
+  // display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > .containerMain {
+    // border: 1px solid red;
+    background-color: white;
+    border-radius: 5px;
+    width: 350px;
+    // height: 200px;
+
+    > .popupTop {
+      background-color: $primary;
+      height: 42px;
+      border-radius: 4px 4px 0px 0px;
+      display: flex;
+      align-items: center;
+
+      > h3 {
+        @include font(white, 400);
+        padding-left: 30px;
+      }
+    }
+
+    > .popupUnder {
+      // height: calc(200px - 48px);
+      padding: 25px 30px;
+
+      > p {
+        @include font($black, 400, 15px);
+      }
+
+      .popupBtnBox {
+        // border: 1px solid red;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 40px;
+
+        button {
+          @include font($primary, 500, $fontSize-h6);
+          background-color: initial;
+          border: none;
+          cursor: pointer;
+          transition: all 0.2s;
+
+          &:hover {
+            color: $secondary;
+          }
+
+          &.popupCloseBtn {
+            margin-right: 10px;
+            color: #8f8f8f;
+
+            &:hover {
+              color: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// loading
+.loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

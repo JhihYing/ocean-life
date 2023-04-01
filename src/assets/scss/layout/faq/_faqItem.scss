@@ -1,0 +1,115 @@
+.faqBoxLi {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  button {
+    @include staticButton($black-light, white, 100%, auto, 3px);
+
+    // width: 100%;
+    border: 1px solid $black-light;
+    padding: 30px 0px 30px 30px;
+    display: flex;
+    // background-color: white;
+    // border-radius: 3px;
+    position: relative;
+    align-items: center;
+    // cursor: pointer;
+    transition: all 0.2s;
+
+    @include mobile {
+      padding-left: 20px;
+    }
+
+    &:hover,
+    &.active {
+      background-color: rgba(18, 30, 46, 0.07);
+    }
+
+    // +號
+    &::after {
+      content: "\002B";
+      color: rgba(20, 20, 20, 0.4);
+      font-size: 35px;
+      position: absolute;
+      right: 27px;
+      margin-bottom: 5px;
+    }
+
+    // -號
+    &.active::after {
+      content: "\2212";
+    }
+
+    span {
+      @include font($black, 500);
+
+      &.question {
+        font-weight: 400;
+        margin-left: 30px;
+        // border: 1px solid rebeccapurple;
+        // max-width: 780px;
+        text-align: start;
+        // border: 1px solid turquoise;
+        width: 100%;
+
+        @include iPad {
+          width: 75%;
+          font-size: 15px;
+        }
+
+        @include mobile {
+          margin-left: 20px;
+          width: 65%;
+        }
+      }
+    }
+  }
+}
+
+.faqContent {
+  background-color: white;
+  // padding: 50px 76px 50px 76px;
+  padding: 0px 18px;
+  border-radius: 3px;
+  // display: none;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+
+  // @include mobile {
+  //   padding: 40px 30px 40px 40px;
+  // }
+
+  &.open {
+    display: block;
+  }
+
+  p {
+    @include font($black, 300);
+    margin-bottom: 6px;
+    line-height: 1.5;
+
+    padding: min(calc(1.01232rem + 2.34742vw), 3.125rem)
+      min(calc(0.36972rem + 3.75587vw), 3.75rem);
+
+    @include iPad {
+      font-size: 15px;
+    }
+  }
+}
+
+// .slide-enter-active,
+// .slide-leave-active {
+//   transition: max-height 0.5s ease;
+//   max-height: 400px;
+// }
+
+// .slide-enter,
+// .slide-leave-to {
+//   max-height: 0;
+//   overflow: hidden;
+// }

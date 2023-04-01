@@ -1,0 +1,9 @@
+.primaryAbtn {
+  @include font(white, 400, $fontSize-h6);
+  @include staticAbutton($primary, $primary);
+  // border: 2px solid $primary;
+  // padding: 10px 40px;
+  // border-radius: 20px;
+  margin-left: 80px;
+  // background-color: $primary;
+}

@@ -1,0 +1,213 @@
+.ticket {
+  width: 100%;
+  margin-bottom: 90px;
+  padding-top: 75px;
+
+  .bg {
+    @include bg;
+  }
+}
+
+.containerMain {
+  @include containerMain;
+}
+
+.ticketInfoBox {
+  width: 100%;
+
+  h3 {
+    @include font($primary, 600, $fontSize-h3);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.noticeText {
+  margin-top: 10px;
+  padding-left: 20px;
+
+  > li {
+    @include font($black, 400, $fontSize-h6);
+    line-height: 1.5;
+    list-style: circle;
+
+    @include iPad {
+      font-size: 13px;
+    }
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+}
+
+.buyTicket {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    @include font($primary, 600, $fontSize-h3);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  h6 {
+    @include font($black, 400, $fontSize-h6);
+  }
+
+  hr {
+    width: 100%;
+    border: none;
+    background-color: $black-light;
+    height: 1.5px;
+    margin: 10px 0px;
+  }
+
+  p {
+    @include font($black, 400, $fontSize-h5);
+    line-height: 1.5;
+    text-align: center;
+    font-size: 16px;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .buyTicketBTN {
+    display: flex;
+    margin-top: 50px;
+
+    .primaryAbtn {
+      @include font(white, 400, $fontSize-h6);
+      @include staticAbutton($primary, $primary);
+      margin-left: 80px;
+
+      transition: all 0.3s;
+
+      @include mobile {
+        margin-left: 50px;
+      }
+      @include mobile-XS {
+        margin-left: 30px;
+      }
+
+      &:hover {
+        background-color: $secondary;
+        border-color: $secondary;
+      }
+    }
+
+    .SecondaryBtn {
+      @include font($primary, 400, $fontSize-h6);
+      @include staticButton($primary, $primary);
+      background-color: white;
+      transition: all 0.3s;
+
+      &:hover {
+        border-color: $secondary;
+        color: $secondary;
+      }
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from {
+  opacity: 0;
+}
+.fade-enter-to {
+  opacity: 1;
+}
+.fade-leave-from {
+  opacity: 1;
+}
+.fade-leave-to {
+  opacity: 0;
+}
+
+.infoIconBox {
+  display: flex;
+  justify-content: center;
+
+  .infoIconLi {
+    // border: 1px solid red;
+    margin: 0px 20px;
+
+    &:first-child {
+      margin-left: 0px;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    @include mobile {
+      margin: 0px 12px;
+    }
+    @include mobile-XS {
+      margin: 0px 10px;
+    }
+
+    > a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .infoIcon {
+        width: 60px;
+        height: 59px;
+        // border: 1px solid olive;
+        margin-bottom: 10px;
+
+        @include mobile {
+          width: 50px;
+          height: 50px;
+        }
+
+        &.trafficIcon {
+          width: 75px;
+
+          @include mobile {
+            width: 65px;
+          }
+        }
+
+        &.guideIcon {
+          width: 66px;
+          padding-top: 5px;
+        }
+
+        &.activityIcon {
+          width: 51px;
+        }
+
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      > p {
+        @include font(#bebebe, 500);
+
+        @include mobile {
+          font-size: 15px;
+        }
+        @include mobile-XS {
+          font-size: 14px;
+        }
+
+        &.active {
+          color: $primary;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

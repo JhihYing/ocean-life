@@ -1,0 +1,104 @@
+.foodBox {
+  margin-top: 130px;
+  // border: 1px solid greenyellow;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include laptop {
+    margin-top: 65px;
+  }
+
+  h3 {
+    @include font($primary, 600, $fontSize-h3);
+  }
+  p {
+    @include font($black, 400, $fontSize-h6);
+    margin: 30px 0px;
+
+    @include mobile-XS {
+      font-size: 13px;
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 360px;
+  // border: 1px solid green;
+  cursor: pointer;
+
+  @include mobile-XS {
+    height: 340px;
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  > p {
+    @include font($black, 400, $fontSize-h6);
+    margin: 20px 0px;
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slideImg {
+  width: 260px;
+  height: 260px;
+
+  @include mobile-XS {
+    width: 240px;
+    height: 240px;
+  }
+
+  > img {
+    @include img;
+  }
+}
+.swiper-button-prev {
+  left: -3px;
+  top: 126px;
+  transition: all 0.2s;
+
+  &::after {
+    content: "";
+    @include img-svg(menu_left_arrow);
+    width: 16px;
+    height: 30px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.swiper-button-next {
+  right: -3px;
+  top: 126px;
+  transition: all 0.2s;
+
+  &::after {
+    content: "";
+    @include img-svg(menu_right_arrow);
+    width: 16px;
+    height: 30px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// 點點
+.swiper {
+  --swiper-theme-color: #1152a0;
+}

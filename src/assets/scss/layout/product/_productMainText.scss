@@ -1,0 +1,182 @@
+.productMainInfoBox {
+  width: 35%;
+  // margin-left: 60px;
+
+  @include laptop {
+    width: 45%;
+  }
+  @include iPad {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  h3 {
+    @include font($primary, 600, $fontSize-h3);
+    margin-bottom: 30px;
+  }
+  .free {
+    @include font($black, 500, $fontSize-h6);
+    position: relative;
+    margin-left: 9px;
+    // border: 1px solid red;
+
+    &::before {
+      content: "";
+      width: 3.5px;
+      height: 150%;
+      background-color: $secondary;
+      position: absolute;
+      bottom: -5px;
+      left: -8px;
+    }
+  }
+  .price {
+    display: flex;
+    margin: 30px 0px;
+
+    h5 {
+      @include font($black, 600, $fontSize-h5);
+
+      &.saleActive {
+        color: #a0a0a0;
+        text-decoration: line-through;
+      }
+    }
+
+    .priceSale {
+      display: flex;
+      align-items: center;
+      margin-left: 30px;
+
+      h5 {
+        color: $brown;
+      }
+      span {
+        @include font($brown, 400, $fontSize-h6);
+        border: 1.6px solid $brown;
+        border-radius: 3px;
+        margin-left: 10px;
+        padding: 2px 3px;
+      }
+    }
+  }
+}
+
+select {
+  width: 100%;
+  border-radius: 3px;
+  border: 2px solid #d6d6d6;
+  padding: 3px 6px;
+  color: $black;
+  font-weight: 500;
+  height: 35px;
+}
+
+.numCollectBox {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: space-between;
+
+  .numBox {
+    display: flex;
+    align-items: center;
+
+    .num {
+      @include font($black, 600, $fontSize-h6);
+      margin-right: 20px;
+    }
+    .numBtn {
+      display: flex;
+      align-items: center;
+
+      span {
+        @include font($black, 800, $fontSize-h3);
+        margin-bottom: 5px;
+        cursor: pointer;
+
+        &.addBtn {
+          margin-bottom: 2px;
+        }
+      }
+      input {
+        margin: 0px 10px;
+        width: 50px;
+        // border: none;
+        text-align: center;
+      }
+    }
+  }
+  .collectBox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    .collectImg {
+      width: 25px;
+      margin-bottom: -3px;
+      margin-right: 8px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    span {
+      @include font($black, 500, $fontSize-h6);
+    }
+  }
+}
+
+.productBtnBox {
+  width: 100%;
+  // border: 1px solid palegreen;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  // justify-content: space-between;
+
+  > button {
+    @include font($primary, 500, $fontSize-h6);
+    border: 2px solid $primary;
+    border-radius: 3px;
+    // padding: 8px 20px;
+    width: 50%;
+    // width: 145px;
+    height: 35px;
+    text-align: center;
+    background-color: initial;
+    // height: 480px;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &.addCartBtn:hover {
+      border-color: $secondary;
+      color: $secondary;
+    }
+
+    &.buyBtn {
+      background-color: $primary;
+      color: white;
+      margin-left: 15px;
+
+      &:hover {
+        background-color: $secondary;
+        border-color: $secondary;
+      }
+    }
+  }
+}
+.stock {
+  @include font($black, 500, $fontSize-h6);
+}
+.stockNotic {
+  @include font(#cd3c3c, 500, $fontSize-h6);
+  margin-top: 10px;
+}

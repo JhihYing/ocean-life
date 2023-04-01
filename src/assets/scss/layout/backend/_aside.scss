@@ -1,0 +1,189 @@
+.aside {
+  background-color: $bg-primary;
+  // height: calc(100vh - 75px);
+  // min-height: calc(100vh - 75px);
+  padding: 65px 60px 90px 60px;
+  min-width: 225px;
+}
+
+.navbar {
+  width: 120px;
+
+  > li {
+    margin-bottom: 25px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &:hover > a > p {
+      color: $primary;
+    }
+
+    &:hover > a > div > .memberImg {
+      background-image: url("@/assets/images/backMemberOn.svg");
+    }
+    &:hover > a > div > .newsImg {
+      background-image: url("@/assets/images/backNewsOn.svg");
+    }
+    &:hover > a > div > .activityImg {
+      background-image: url("@/assets/images/backActivityOn.svg");
+    }
+    &:hover > a > div > .shopImg {
+      background-image: url("@/assets/images/backShopOn.svg");
+    }
+    &:hover > a > div > .arrowImg {
+      background-image: url("@/assets/images/backArrowOn.svg");
+    }
+
+    > a {
+      display: flex;
+      align-items: center;
+
+      > .icon {
+        width: 16px;
+        height: 15px;
+
+        > &.member.active > .memberImg {
+          background-image: url("@/assets/images/backMemberOn.svg");
+        }
+        > &.news.active > .newsImg {
+          background-image: url("@/assets/images/backNewsOn.svg");
+        }
+        > &.activity.active > .activityImg {
+          background-image: url("@/assets/images/backActivityOn.svg");
+        }
+        > &.shop.active > .shopImg {
+          background-image: url("@/assets/images/backShopOn.svg");
+        }
+        > &.arrowIcon.active > .arrowImg {
+          background-image: url("@/assets/images/backArrowOn.svg");
+        }
+
+        > .memberImg {
+          background-image: url("@/assets/images/backMember.svg");
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        > .newsImg {
+          background-image: url("@/assets/images/backNews.svg");
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        > .activityImg {
+          background-image: url("@/assets/images/backActivity.svg");
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        > .shopImg {
+          background-image: url("@/assets/images/backShop.svg");
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        // > img {
+        //   @include img;
+        //   object-fit: contain;
+        // }
+      }
+      > p {
+        @include font($black, 500, 15px);
+        margin-left: 10px;
+        transition: all 0.2s;
+
+        &.active {
+          color: $primary;
+        }
+      }
+
+      .shop {
+        position: relative;
+      }
+
+      .arrowIcon {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3px;
+
+        width: 13px;
+        height: 10px;
+
+        > &.active {
+          transform: rotate(180deg);
+          margin-top: 2px;
+        }
+
+        > .arrowImg {
+          background-image: url("@/assets/images/backArrow.svg");
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        // > img {
+        //   width: 100%;
+        //   height: 100%;
+        // }
+      }
+    }
+  }
+}
+
+.navbar-dropdown {
+  margin-top: 25px;
+  margin-left: 26px;
+  position: relative;
+  // display: none;
+
+  &::before {
+    content: "";
+    width: 1.5px;
+    height: 100%;
+    background-color: #c3c3c3;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+  }
+
+  > li {
+    margin-bottom: 15px;
+
+    &:hover > a {
+      color: #2e75b7;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    > a {
+      @include font($black, 500, $fontSize-h6);
+      transition: all 0.2s;
+
+      &.router-link-active > .shopImg {
+        background-image: url("@/assets/images/backShopOn.svg");
+      }
+      &.router-link-active > div > .arrowImg {
+        background-image: url("@/assets/images/backArrowOn.svg");
+      }
+
+      &.active {
+        color: #2e75b7;
+      }
+    }
+  }
+}
+
+.router-link-active {
+  color: #2e75b7 !important;
+}

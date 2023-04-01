@@ -1,0 +1,42 @@
+.BackBTN {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+
+  .back {
+    border: 2.5px solid $primary;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 30px;
+
+    transition: all 0.1s;
+
+    &:hover {
+      background-color: $secondary;
+      border-color: $secondary;
+    }
+
+    &:hover > p {
+      color: white;
+      font-weight: 400;
+    }
+
+    p {
+      @include font($primary, 600);
+    }
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+.prev:hover,
+.next:hover {
+  opacity: 0.9;
+}

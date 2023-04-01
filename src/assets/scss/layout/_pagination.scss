@@ -1,0 +1,86 @@
+.paginationBox {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: center;
+
+  .pagination {
+    display: flex;
+    align-items: center;
+
+    .arrowBtn {
+      width: 8px;
+      padding-top: 3px;
+      cursor: pointer;
+
+      &.disabled {
+        // cursor: not-allowed;
+        opacity: 0.4;
+      }
+
+      > img {
+        @include img;
+        object-fit: contain;
+      }
+    }
+
+    .dot {
+      @include font($black, 400);
+    }
+
+    .preBtn {
+      margin-right: 10px;
+    }
+    .nextBtn {
+      margin-left: 10px;
+    }
+    .pageItemBox {
+      display: flex;
+      align-items: center;
+
+      .pageItem {
+        @include font($black, 400);
+        // border: 1px solid $black;
+        // padding: 3px 8px;
+        margin: 0px 15px;
+        cursor: pointer;
+
+        &:hover {
+          color: $primary;
+        }
+        &.active {
+          background-color: $primary;
+          // color: $primary;
+          color: white;
+          width: 27px;
+          height: 27px;
+          border-radius: 50%;
+          // border-radius: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .goBox {
+    margin-left: 20px;
+    display: flex;
+    align-self: center;
+
+    > input {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    > button {
+      background-color: white;
+      @include font($black, 400, 14px);
+      border: 1px solid $black;
+      border-radius: 2px;
+      height: 25px;
+      cursor: pointer;
+    }
+  }
+}

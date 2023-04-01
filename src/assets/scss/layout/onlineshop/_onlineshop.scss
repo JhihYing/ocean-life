@@ -1,0 +1,138 @@
+.onlineshop {
+  width: 100%;
+  margin-bottom: 90px;
+  padding-top: 75px;
+}
+
+.containerMain {
+  @include containerMain;
+  margin-top: 70px;
+}
+
+.titleBox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  width: 100%;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  h3 {
+    @include font($primary, 600, $fontSize-h3);
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.productBox {
+  width: 100%;
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 35px;
+  column-gap: 25px;
+
+  @include laptop {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include iPad {
+    grid-template-columns: 1fr 1fr;
+    // column-gap: 57px;
+  }
+  @include mobile {
+    // grid-template-columns: 1fr;
+    column-gap: 15px;
+    row-gap: 30px;
+  }
+}
+
+.bg {
+  @include img-jpg(shopBg);
+}
+
+.serchSortBox {
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    flex-direction: column;
+    width: 100%;
+    // justify-content: center;
+    // justify-content: space-between;
+  }
+
+  .searchBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    > input {
+      height: 30px;
+      padding: 5px 35px 5px 10px;
+      width: 200px;
+
+      @include mobile {
+        width: 100%;
+        height: 35px;
+        // margin-bottom: 20px;
+      }
+
+      // @include mobile {
+      //   // width: calc(100% - 140px);
+      //   width: 100%;
+      // }
+    }
+
+    .searchBtn {
+      @include img-svg(search);
+      background-size: contain;
+      width: 17px;
+      height: 17px;
+      position: absolute;
+      right: 8px;
+      border: none;
+      background-color: initial;
+      cursor: pointer;
+    }
+  }
+
+  > select {
+    margin-left: 10px;
+    // @include font($black, 400, $fontSize-h3);
+    color: $black;
+    height: 30px;
+    font-weight: 500;
+
+    @include mobile {
+      width: 100%;
+      margin: 0px;
+      margin-top: 20px;
+      height: 35px;
+    }
+  }
+}
+
+// loading
+.loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  width: 100%;
+}

@@ -1,0 +1,27 @@
+.BackTopBtn {
+  display: inline-block;
+  position: absolute;
+  top: -60px;
+  cursor: pointer;
+  animation: float 3s cubic-bezier(0.1, 0.1, 0.88, 0.88) infinite;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+/* 動畫特效 */
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(0, -2px);
+  }
+  70% {
+    transform: translate(0, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

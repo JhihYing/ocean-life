@@ -1,0 +1,183 @@
+// ----------------- 首頁封面 -----------------
+.indexBanner {
+  width: 100%;
+  padding: 72px 0px 175px 0px;
+
+  @include img-jpg(index_banner);
+  height: 510px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  // Banner
+  .bgBlack {
+    height: 100%;
+    min-width: 100%;
+    background: #002f54;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.3;
+    // z-index: -1;
+  }
+
+  // logo資訊、scroll
+  .indexBannerMain {
+    position: relative;
+    height: 437px;
+    @include containerMain;
+
+    // logo資訊
+    .logoBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 66px 0px 86px 0px;
+
+      .logo {
+        width: 227px;
+
+        @include mobile {
+          width: 200px;
+        }
+
+        img {
+          @include img($object-fit: contain);
+        }
+      }
+
+      > hr {
+        width: 100%;
+        height: 2px;
+        background-color: rgba(256, 256, 256, 1);
+        margin: 20px 0px;
+      }
+
+      > h3 {
+        @include font(white, 400, $fontSize-h3);
+      }
+    }
+
+    // scroll
+    .scrollInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      animation: scroll_float 2s cubic-bezier(0.1, 0.1, 0.88, 0.88) infinite;
+
+      > p {
+        @include font(white, 400, 12px);
+        margin-bottom: 10px;
+      }
+    }
+
+    /* scroll動畫 */
+    @keyframes scroll_float {
+      0% {
+        transform: translate(0, 0);
+      }
+      30% {
+        transform: translate(0, 5px);
+      }
+      70% {
+        transform: translate(0, -2px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+  }
+}
+
+// ----------------- 時間 & 購票資訊 -----------------
+.timeTicketBox {
+  width: 100%;
+  display: flex;
+
+  // 時間資訊
+  .timeBox {
+    background-color: $primary;
+    width: 50%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .timeIcon {
+      @include img-svg(time);
+      width: 24px;
+      height: 24px;
+      margin-right: 20px;
+      margin-bottom: -2px;
+
+      @include iPad {
+        display: none;
+      }
+    }
+
+    .timeTitle {
+      display: flex;
+      align-items: center;
+
+      @include iPad {
+        display: flex;
+        flex-direction: column;
+      }
+
+      > span {
+        @include font(white, 400, 16px);
+
+        @include iPad {
+          font-size: 15px;
+        }
+
+        &.time {
+          font-size: 20px;
+          margin-left: 10px;
+          margin-bottom: 2px;
+
+          @include iPad {
+            margin: 5px 0px 0px 0px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  // 購票資訊
+  .ticketBox {
+    background-color: $secondary;
+    width: 50%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #00d3e2;
+    }
+
+    .ticketIcon {
+      @include img-svg(ticket);
+      width: 30px;
+      height: 20px;
+      margin-right: 20px;
+      margin-bottom: -2px;
+
+      @include iPad {
+        display: none;
+      }
+    }
+
+    > span {
+      @include font(white, 400, 16px);
+
+      @include iPad {
+        font-size: 15px;
+      }
+    }
+  }
+}

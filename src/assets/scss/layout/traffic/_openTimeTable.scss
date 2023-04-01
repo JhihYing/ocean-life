@@ -1,0 +1,55 @@
+.openTable {
+  border: 1px solid $black-light;
+  margin: 30px 0px;
+
+  @include laptop {
+    margin: 20px 0px;
+  }
+  @include iPad {
+    margin: 30px 0px;
+  }
+  @include mobile-XS {
+    width: 100%;
+  }
+}
+
+tbody {
+  tr {
+    th {
+      border: 1px solid $black-light;
+      background-color: $primary;
+      @include font(white, 400);
+      vertical-align: middle;
+      padding: 15px 30px;
+      text-align: start;
+
+      @include desktop {
+        font-size: 15px;
+      }
+
+      @include laptop {
+        font-size: 14px;
+        padding: 15px 16px;
+      }
+      @include mobile-XS {
+        padding: 15px 10px;
+      }
+    }
+    td {
+      border: 1px solid $black-light;
+      @include font($black, 400);
+      padding: 15px 30px;
+
+      @include laptop {
+        font-size: 14px;
+      }
+
+      @include laptop {
+        padding: 15px 20px;
+      }
+      @include mobile-XS {
+        padding: 15px 10px;
+      }
+    }
+  }
+}

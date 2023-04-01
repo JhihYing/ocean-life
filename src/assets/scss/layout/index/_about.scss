@@ -1,0 +1,223 @@
+.containerMain {
+  position: relative;
+  @include containerMain;
+}
+
+.aboutBox {
+  width: 100%;
+  // border: 1px solid purple;
+  padding: 60px 0px;
+
+  @include img-jpg(about_bg);
+  height: 580px;
+  width: 100%;
+  background-position: bottom;
+  background-size: cover;
+  overflow: hidden;
+
+  .aboutMain {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    // 泡泡
+    .bubble {
+      // position: relative;
+
+      > div {
+        animation: falling 4s infinite;
+      }
+      .oneBubble {
+        @include img-svg(bubble);
+
+        &.leftBubble01 {
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 118px;
+          left: 240px;
+          animation-delay: -0.1s;
+        }
+
+        &.leftBubble02 {
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: 171px;
+          left: 121px;
+          animation-delay: -1.6s;
+
+          @include mobile {
+            display: none;
+          }
+        }
+
+        &.leftBubble03 {
+          width: 28px;
+          height: 28px;
+          position: absolute;
+          top: 253px;
+          left: 80px;
+          animation-delay: -0.4s;
+
+          @include mobile-XS {
+            left: 11px;
+            top: 304px;
+          }
+        }
+
+        &.rightBubble03 {
+          width: 56px;
+          height: 56px;
+          position: absolute;
+          top: 128px;
+          right: 172px;
+          animation-delay: -2.3s;
+
+          @include laptop {
+            display: none;
+          }
+        }
+        &.rightBubble04 {
+          width: 28px;
+          height: 28px;
+          position: absolute;
+          top: 213px;
+          right: 103px;
+          animation-delay: -0.4s;
+
+          @include mobile-XS {
+            right: 22px;
+          }
+        }
+      }
+
+      .oneBubbleColor {
+        @include img-svg(bubble_color);
+
+        &.rightBubble01 {
+          width: 14px;
+          height: 14px;
+          position: absolute;
+          top: 82px;
+          right: 220px;
+          animation-delay: -0.5s;
+        }
+
+        &.rightBubble02 {
+          width: 37px;
+          height: 37px;
+          position: absolute;
+          top: 118px;
+          right: 270px;
+          animation-delay: -1.6s;
+        }
+
+        &.rightBubble05 {
+          width: 60px;
+          height: 60px;
+          position: absolute;
+          top: 290px;
+          right: 190px;
+          animation-delay: -0.7s;
+
+          @include laptop {
+            display: none;
+          }
+        }
+      }
+
+      .twoBubble {
+        @include img-svg(two_bubble);
+        width: 85px;
+        height: 85px;
+        position: absolute;
+        top: 313px;
+        left: 197px;
+        animation-delay: -2s;
+
+        @include laptop {
+          width: 70px;
+          height: 70px;
+          top: 409px;
+          left: 571px;
+        }
+
+        @include iPad {
+          left: 460px;
+        }
+
+        @include mobile {
+          left: 295px;
+        }
+
+        @include mobile-XS {
+          left: 241px;
+        }
+      }
+    }
+
+    // 標題 & 內文
+    > h3 {
+      @include font(white, 600, $fontSize-h3);
+      margin-bottom: 53px;
+      position: relative;
+
+      @include iPad {
+        font-size: 22px;
+        font-weight: 500;
+      }
+
+      &::after {
+        content: "";
+        @include img-svg(wave, repeat-x);
+
+        display: inline-block;
+        width: 140px;
+        height: 8px;
+
+        background-position: center;
+        margin-bottom: 3px;
+        position: absolute;
+        bottom: -23px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    > p {
+      @include font(white, 400);
+      line-height: 1.5;
+      text-align: center;
+
+      // @include mobile {
+      //   font-weight: 300;
+      // }
+      @include mobile-XS {
+        font-size: 15px;
+      }
+
+      &:last-child {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+/* 關於我們-泡泡動畫 */
+@keyframes falling {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  0% {
+    transform: translate(0px, 100px);
+  }
+  100% {
+    transform: translate(0px, -60px);
+  }
+}

@@ -1,0 +1,49 @@
+.narbar-icon {
+  a {
+    display: inline-block;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .memberBtn {
+    margin-right: 10px;
+    width: 33px;
+    height: 33px;
+  }
+}
+
+// .memberIcon:hover path {
+//   fill: #de5b78;
+// }
+
+.memberIcon {
+  background-image: url("@/assets/images/memberIcon.svg");
+  margin-right: 10px;
+  width: 33px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &:hover,
+  &.on {
+    background-image: url("@/assets/images/memberIconOn.svg");
+  }
+}
+
+.cartIcon {
+  background-image: url("@/assets/images/cartIcon.svg");
+  margin-right: 10px;
+  width: 33px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &:hover,
+  &.on {
+    background-image: url("@/assets/images/cartIconOn.svg");
+  }
+}

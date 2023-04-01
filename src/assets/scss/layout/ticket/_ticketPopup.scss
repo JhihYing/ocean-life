@@ -1,0 +1,78 @@
+.ticket-popup {
+  // border: 1px solid orange;
+  background-color: rgba(0, 0, 0, 0.9);
+  // background-color: aqua;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  z-index: 999;
+  // transition: all 1s ease;
+  // display: none;
+
+  > .containerMain {
+    @include containerMain;
+    margin: 100px auto;
+    padding: 0px 40px 0px 60px;
+
+    @include laptop {
+      padding: 0px 40px 0px 60px;
+    }
+
+    > h3 {
+      @include font($secondary, 500, $fontSize-h3);
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: $secondary;
+        position: absolute;
+        bottom: -13px;
+        left: -1px;
+      }
+    }
+  }
+}
+.buyTicket-notice {
+  > li {
+    @include font(white, 400, $fontSize-h5);
+    line-height: 1.5;
+    // list-style: disc;
+    margin-bottom: 8px;
+    position: relative;
+
+    @include laptop {
+      font-size: 16px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -22px;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      background-color: #ffe100;
+      border-radius: 50%;
+    }
+  }
+}
+
+.closeBtn {
+  @include font(white, 400, $fontSize-h6);
+  @include staticButton(white, initial);
+  transition: all 0.3s;
+  margin-top: 50px;
+
+  &:hover {
+    border-color: $secondary;
+    background-color: $secondary;
+    color: white;
+  }
+}
