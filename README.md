@@ -1,4 +1,9 @@
 # Ocean Life (水族館形象網站) | 2023.04
+
+> 備註：  
+> 由於後端程式是部署於 Heroku (需付費)，目前已將 Heroku 暫停，所以 API 會不能使用。 
+> 若造成不便之處，敬請見諒！
+
 ![](https://i.imgur.com/dWeyazQ.jpg)
 
 ## 專案說明
