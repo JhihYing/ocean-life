@@ -21,27 +21,29 @@
 - 後台 (無RWD)：https://jhihying.github.io/ocean-life/backendLogin
 
 
-## 使用技術 / 套件 / 工具
+## 使用技術 / 套件
 ### UI / UX
-- 透過 Figma 完成 UI 介面設計
-- 使用 Photoshop 處理圖片相關問題
-- 使用 Illustrator 繪製相關的圖示、Logo
+| 類別        | 技術／工具說明                        |
+|------------|-------------------------------------|
+| 介面設計        | Figma   |
+| 圖片處理     | Photoshop         |
+| 圖示繪製     | 	Illustrator（Logo／ICON）  |
 
 
 ### 前端
-- 以手刻的方式來開發 UI 介面
-- 透過 **Axios 套件** 與 後端串接 API
-- RWD 斷點：414、576、768、992、1200
-
-【使用】Vue 3、Vue Cli 3、Vue Router、Vuex、SASS (SCSS)、jQuery、RWD
-
-【套件應用】Swiper (輪播圖)、AOS (視覺滾差動畫)、Axios
+| 類別        | 技術／工具說明                        |
+|------------|-------------------------------------|
+| 技術        | Vue 3、Vue CLI、Vue Router、Vuex、SASS (SCSS)、jQuery、RWD   |
+| API 串接     | Axios（連接後端 API）         |
+| 套件應用     | Swiper (輪播圖)、AOS (視覺滾差動畫)  |
+| 部署平台     | GitHub Pages          |
 
 
 ### 後端
-- 後端程式 部署於 **Heroku**
-
-【使用】Java、Spring Boot、MySQL (資料庫)
+| 類別        | 技術／工具說明                        |
+|------------|-------------------------------------|
+| 技術        | Java、Spring Boot、MySQL (資料庫)    |
+| 部署平台     | Heroku （需付費，目前已暫停服務）      |
 
 
 ## 主要功能
