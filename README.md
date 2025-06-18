@@ -13,7 +13,7 @@
 
 ## 開發目的
 - 練習 從設計發想到 UI 規劃與網站開發的完整流程
-- 練習 Vue3 框架、Vue生態系統與工具 (包含 vue-cli、vue-router、vuex)
+- 練習 Vue3 框架、Vue生態系統與工具 (包含 Vue CLI、Vue Router、Vuex)
 - 練習 前後端分離架構，並與後端工程師協作開發
 
 ## Demo
