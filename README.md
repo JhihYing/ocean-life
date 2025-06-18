@@ -17,8 +17,8 @@
 - 練習 前後端分離架構，並與後端工程師協作開發
 
 ## Demo
-- 前台：https://jhihying.github.io/ocean-life/
-- 後台 (無RWD)：https://jhihying.github.io/ocean-life/backendLogin
+- [Ocean Life - 前台](https://jhihying.github.io/ocean-life/)
+- [Ocean Life - 後台 (無RWD)](https://jhihying.github.io/ocean-life/backendLogin)
 
 
 ## 使用技術 / 套件
